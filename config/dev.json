@@ -1,0 +1,18 @@
+{
+  "DB": {
+    "mongo": {
+      "host": "mongo",
+      "port": 27017,
+      /*user: '',
+      pass: '',*/
+      "database": "pockey"
+    },
+    "mysql": {
+      "host": "combros.c5vblxaoomkj.us-west-2.rds.amazonaws.com",
+      "port": 3306,
+      "user": "root",
+      "password": "12345678",
+      "database": "pockey"
+    }
+  }
+}
