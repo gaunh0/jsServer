@@ -142,9 +142,7 @@ function onListening() {
 
 require('./app/models/User');
 require('./app/models/UserGroup');
-require('./app/models/UserGroupUserMap');
-require('./app/models/DeviceUserMap');
+require('./app/models/Sensor');
 require('./app/models/Device');
-require('./app/models/DeviceLog');
-require('./app/models/ErrorCode');
-require('./app/models/ErrorLog');
+require('./app/models/Home');
+

@@ -1,5 +1,5 @@
 
-const DeviceLog = require('../../app/models/DeviceLog');
+const DeviceLog = require('../../app/models/Home');
 const time = require('../../libs/time');
 
 module.exports = {

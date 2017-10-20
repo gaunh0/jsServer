@@ -6,12 +6,8 @@ const UserGroupSchema = {
     type: Number,
     primaryKey: true
   },
-  name: String,
-  level: Number,
-  status: Number,
-  createdAt: Date,
-  updatedAt: Date,
-  updatedBy: Number
+  uid : String,
+  did : String
 };
 
-mysql.model('userGroup', UserGroupSchema);
+mysql.model('user_group', UserGroupSchema);

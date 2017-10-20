@@ -9,30 +9,34 @@ const server = net.createServer((c) => {
     console.log('client disconnected');
   });
 
-  c.id = random.generate(7);
+  c.id = random.generate(10);
 
   c.on('data', (data) => {
     let array = data.toString().split(';');
     let object = {};
 
-    object.cmd = array[0];
-    object.imei = array[1];
     switch (array[0]) {
       case '@PING':
-        c.write(device.ping(object));
+        c.write(device.ping());
+        break;
+      case '@REGISTER':
+        object.did = array[1];
+        c.write(device.register(object.did));
+        break;
+      default:
+        c.write(device.rerror());
         break;
     }
   });
-
-  c.setTimeout(1000);
-
+  // set timeout to disconect
+  c.setTimeout(10000);
   c.on('timeout', () => {
     console.log('socket timeout');
     c.end();
   });
 
-  c.write('hello\r\n');
-  //c.pipe(c);
+  c.write('Hello \r\n');
+//  c.pipe(c);
 });
 
 server.on('error', (err) => {

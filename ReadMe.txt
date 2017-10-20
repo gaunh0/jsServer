@@ -1,0 +1,2 @@
+- \routes\socket.js : connection, recv form client ..
+- \app\controllers\socket\device.js : api

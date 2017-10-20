@@ -1,18 +1,21 @@
 
 const mysql = require('../../libs/mysql');
 
-const DeviceSchema = {
+const SensorSchema = {
   id: {
     type: Number,
     primaryKey: true
   },
-  imei: String,
+  did: String,
   name: String,
   status: Number,
-  state: Number,
+  type: Number,
+  hid: Number,
+  rid: Number,
+  uid: Number,
   createdAt: Date,
   updatedAt: Date,
   updatedBy: Number
 };
 
-mysql.model('device', DeviceSchema);
+mysql.model('device', SensorSchema);

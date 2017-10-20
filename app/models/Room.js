@@ -1,17 +1,16 @@
-
 const mysql = require('../../libs/mysql');
 
-const UserSchema = {
+const RoomSchema = {
   id: {
     type: Number,
     primaryKey: true
   },
-  uid: String,
-  password: String,
-  name: String,
+  rid: String,
+  roomName: String,
+  hid : Number,
   createdAt: Date,
   updatedAt: Date,
   updatedBy: Number
 };
 
-mysql.model('user', UserSchema);
+mysql.model('room', RoomSchema);

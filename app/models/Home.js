@@ -1,18 +1,15 @@
-/**
- * Created by ADMIN on 9/12/2017.
- */
 const mysql = require('../../libs/mysql');
 
-const ErrorCodeSchema = {
+const HomeSchema = {
   id: {
     type: Number,
     primaryKey: true
   },
-  errorCode: Number,
-  str: String,
+  hid: String,
+  homeName: String,
   createdAt: Date,
   updatedAt: Date,
   updatedBy: Number
 };
 
-mysql.model('error_code', ErrorCodeSchema);
+mysql.model('home', HomeSchema);
